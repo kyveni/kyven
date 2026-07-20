@@ -1,0 +1,5 @@
+{ title: "Brand Identity", status: "Complete" },
+{ title: "Landing Page", status: "Complete" },
+{ title: "Waitlist", status: "Complete" },
+{ title: "Robinhood Integration", status: "In Progress" },
+{ title: "Public Launch", status: "Planned" },
