@@ -8,12 +8,12 @@ export default function About() {
     {
       title: "Landing Page",
       status: "Complete",
-      color: "bg-line-400",
+      color: "bg-lime-400",
     },
     {
       title: "Waitlist",
       status: "complete",
-      color: "bg-line-400",
+      color: "bg-lime-400",
     },
     {
       title: "Robinhood Integration",
