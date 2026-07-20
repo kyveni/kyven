@@ -7,22 +7,22 @@ export default function About() {
     },
     {
       title: "Landing Page",
+      status: "Complete",
+      color: "bg-line-400",
+    },
+    {
+      title: "Waitlist",
+      status: "complete",
+      color: "bg-line-400",
+    },
+    {
+      title: "Robinhood Integration",
       status: "In Progress",
       color: "bg-yellow-400",
     },
     {
-      title: "Waitlist",
-      status: "Coming Next",
-      color: "bg-zinc-500",
-    },
-    {
-      title: "Robinhood Integration",
-      status: "Planned",
-      color: "bg-zinc-500",
-    },
-    {
       title: "Public Launch",
-      status: "Soon",
+      status: "planned",
       color: "bg-zinc-500",
     },
   ];
