@@ -30,7 +30,7 @@ export function getLaunchState(): LaunchState {
   const hasLaunchpad = launchpadUrl.length > 0
 
   let statusLabel = 'Awaiting deployment'
-  if (hasContract && hasLaunchpad) statusLabel = 'Deployment verified'
+  if (hasContract && hasLaunchpad) statusLabel = 'Live'
   else if (hasContract || hasLaunchpad) statusLabel = 'Deployment details updating'
 
   return { hasContract, hasLaunchpad, contractAddress, launchpadUrl, statusLabel }

@@ -41,12 +41,8 @@ export function Launch() {
             </p>
 
             <div className="border-line mt-5 flex items-center gap-3 rounded-2xl border bg-black/25 p-3.5">
-              <span
-                className={`min-w-0 flex-1 font-mono ${
-                  state.hasContract ? 'text-lime-soft' : 'text-muted-2'
-                } overflow-hidden break-all sm:whitespace-nowrap sm:text-ellipsis`}
-              >
-                {state.hasContract ? state.contractAddress : 'Not published yet'}
+              <span className="text-lime-soft min-w-0 flex-1 font-mono break-all">
+                {state.contractAddress}
               </span>
               <button
                 type="button"
@@ -106,9 +102,7 @@ export function Launch() {
             </div>
 
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              {state.hasLaunchpad
-                ? 'Official launchpad link published.'
-                : 'Launchpad: not published yet.'}
+              Official launchpad link published.
             </p>
           </article>
         </div>
