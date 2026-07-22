@@ -1,23 +1,29 @@
-import Navbar from "@/components/ui/navbar";
-import Hero from "@/components/ui/hero";
-import Stats from "@/components/ui/stats";
-import Features from "@/components/ui/features";
-import About from "@/components/ui/about";
-import Waitlist from "@/components/ui/waitlist";
-import FAQ from "@/components/ui/faq";
-import Footer from "@/components/ui/footer";
+import { Fireflies } from '@/components/rwog/fireflies'
+import { SiteNav } from '@/components/rwog/site-nav'
+import { Hero } from '@/components/rwog/hero'
+import { Story } from '@/components/rwog/story'
+import { Launch } from '@/components/rwog/launch'
+import { Status } from '@/components/rwog/status'
+import { Roadmap } from '@/components/rwog/roadmap'
+import { Faq } from '@/components/rwog/faq'
+import { CtaFooter } from '@/components/rwog/cta-footer'
+import { SoundToggle } from '@/components/rwog/sound-toggle'
 
-export default function Home() {
+export default function Page() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Stats />
-      <Features />
-      <About />
-      <Waitlist />
-      <FAQ />
-      <Footer />
+      <Fireflies />
+      <SiteNav />
+      <main>
+        <Hero />
+        <Story />
+        <Launch />
+        <Status />
+        <Roadmap />
+        <Faq />
+        <CtaFooter />
+      </main>
+      <SoundToggle />
     </>
-  );
+  )
 }
