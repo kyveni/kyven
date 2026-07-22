@@ -26,7 +26,7 @@ export function Launch() {
         <SectionHeading
           eyebrow="Token launch"
           title="Verified links live here."
-          lead="The official contract address and launchpad link will appear here after deployment. Always verify against the official X account before trading."
+          lead="The official contract address and launchpad link are published below. Always verify against the official X account before trading."
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
@@ -37,7 +37,7 @@ export function Launch() {
             </span>
             <h3 className="font-display mt-6 mb-2 text-2xl font-bold">Contract address</h3>
             <p className="leading-relaxed text-muted">
-              The official contract address will appear here.
+              The official contract address is published below.
             </p>
 
             <div className="border-line mt-5 flex items-center gap-3 rounded-2xl border bg-black/25 p-3.5">
@@ -53,17 +53,21 @@ export function Launch() {
                 onClick={handleCopy}
                 disabled={!state.hasContract}
                 aria-label="Copy contract address"
-                title="Copy contract address"
+                title="Copy CA"
                 className="border-line grid h-11 w-11 flex-none place-items-center rounded-full border bg-white/5 text-foreground transition-colors enabled:hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 {copied ? <Check className="h-4 w-4 text-lime" /> : <Copy className="h-4 w-4" />}
               </button>
             </div>
 
-            <p className="mt-4 text-sm leading-relaxed text-muted">
-              {state.hasContract
-                ? 'Contract address published. Always verify before trading.'
-                : 'Available after deployment.'}
+            <p aria-live="polite" className="mt-4 text-sm leading-relaxed">
+              {copied ? (
+                <span className="text-lime font-bold">Copied!</span>
+              ) : (
+                <span className="text-muted-2">
+                  Always verify the contract address through the official RWOG website and X account.
+                </span>
+              )}
             </p>
           </article>
 
@@ -74,14 +78,14 @@ export function Launch() {
             </span>
             <h3 className="font-display mt-4 mb-2 text-2xl font-bold">Official launchpad.</h3>
             <p className="leading-relaxed text-muted">
-              The official launchpad link will appear here.
+              Trade RWOG through the official launchpad below.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={state.hasLaunchpad ? state.launchpadUrl : undefined}
                 target={state.hasLaunchpad ? '_blank' : undefined}
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-disabled={!state.hasLaunchpad}
                 className={`bg-lime inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black text-[#09200f] transition-transform ${
                   state.hasLaunchpad

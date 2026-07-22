@@ -1,4 +1,4 @@
-import { RWOG_CONFIG, getLaunchState, shortAddress } from '@/lib/rwog-config'
+import { RWOG_CONFIG, getLaunchState } from '@/lib/rwog-config'
 import { SectionHeading } from './section-heading'
 
 export function Status() {
@@ -8,12 +8,12 @@ export function Status() {
     { label: 'Token', value: state.hasContract ? 'Live' : 'Not launched', live: state.hasContract },
     {
       label: 'Contract address',
-      value: state.hasContract ? shortAddress(state.contractAddress) : 'Coming after deployment',
+      value: state.hasContract ? 'Published' : 'Coming after deployment',
       live: state.hasContract,
     },
     {
       label: 'Launchpad',
-      value: state.hasLaunchpad ? 'Available' : 'Coming after deployment',
+      value: state.hasLaunchpad ? 'Live' : 'Coming after deployment',
       live: state.hasLaunchpad,
     },
     { label: 'Official X', value: RWOG_CONFIG.twitterHandle, live: true },

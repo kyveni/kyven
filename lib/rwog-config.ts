@@ -9,8 +9,8 @@
  *   launchpadUrl: "https://official-launchpad.example/token/...",
  */
 export const RWOG_CONFIG = {
-  contractAddress: '',
-  launchpadUrl: '',
+  contractAddress: '0x3C3a9ca38c0ac6E65c8D19A05d215D4ebeb6AdDb',
+  launchpadUrl: 'https://www.ponsfamily.com/launchpad/0xa9c8d3da698e91a4981bb6f1670aaea8c7169737',
   twitterHandle: '@Rwog_xyz',
   twitterUrl: 'https://x.com/Rwog_xyz',
 } as const
