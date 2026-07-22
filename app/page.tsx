@@ -7,7 +7,6 @@ import { Status } from '@/components/rwog/status'
 import { Roadmap } from '@/components/rwog/roadmap'
 import { Faq } from '@/components/rwog/faq'
 import { CtaFooter } from '@/components/rwog/cta-footer'
-import { SoundToggle } from '@/components/rwog/sound-toggle'
 
 export default function Page() {
   return (
@@ -23,7 +22,6 @@ export default function Page() {
         <Faq />
         <CtaFooter />
       </main>
-      <SoundToggle />
     </>
   )
 }
